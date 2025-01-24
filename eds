@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDS Information for Athletes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .content {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        .accordion {
+            cursor: pointer;
+            background-color: #f1f1f1;
+            border: none;
+            text-align: left;
+            outline: none;
+            padding: 15px;
+            width: 100%;
+            transition: 0.4s;
+        }
+        .panel {
+            display: none;
+            padding: 0 15px;
+            background-color: white;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>EDS Information for Athletes</h1>
+        <p>Understanding Ehlers-Danlos Syndrome and How to Stay Active Safely</p>
+    </header>
+
+    <nav>
+        <a href="#what-it-is">What is EDS?</a>
+        <a href="#types">Types of EDS</a>
+        <a href="#training">Training Tips</a>
+        <a href="#management">Management</a>
+        <a href="#inspiration">Inspiration</a>
+    </nav>
+
+    <div class="content">
+        <section id="what-it-is">
+            <h2>What is EDS?</h2>
+            <p>EDS (Ehlers-Danlos Syndrome) is a genetic condition that weakens the body's connective tissue, which supports and holds the body together. It affects various parts of the body, including:</p>
+            <ul>
+                <li>Skin</li>
+                <li>Joints</li>
+                <li>Muscles</li>
+                <li>Blood vessels</li>
+                <li>Cartilage</li>
+                <li>Fat</li>
+            </ul>
+            <p>The condition impacts the production of collagen, a protein essential for connective tissue strength.</p>
+        </section>
+
+        <section id="types">
+            <h2>Types of EDS</h2>
+            <button class="accordion">Cardiacvalvular EDS (cvEDS)</button>
+            <div class="panel">
+                <p><strong>Symptoms:</strong> Severe heart valve problems, joint hypermobility, skin hyperextensibility, and scarring.</p>
+                <p><strong>Management:</strong> Regular heart monitoring, potential valve replacement surgery, and lifestyle adjustments.</p>
+            </div>
+            
+            <button class="accordion">Classical EDS (cEDS)</button>
+            <div class="panel">
+                <p><strong>Symptoms:</strong> Stretchy skin, joint hypermobility, and easy bruising.</p>
+                <p><strong>Management:</strong> Skin protection, wound management, and avoiding high-impact activities.</p>
+            </div>
+
+            <button class="accordion">Hypermobile EDS (hEDS)</button>
+            <div class="panel">
+                <p><strong>Symptoms:</strong> Joint instability, chronic pain, mild skin hyperextensibility, and fatigue.</p>
+                <p><strong>Management:</strong> Low-impact exercise, bracing, and a focus on core strength.</p>
+            </div>
+        </section>
+
+        <section id="training">
+            <h2>Training Tips for Athletes</h2>
+            <ul>
+                <li><strong>Low-Impact Exercises:</strong> Swimming, cycling, and modified yoga to reduce strain on joints.</li>
+                <li><strong>Core Strength:</strong> Exercises like planks and bridges to stabilize joints.</li>
+                <li><strong>Injury Prevention:</strong> Use braces, progress gradually, and ensure proper warm-ups.</li>
+            </ul>
+        </section>
+
+        <section id="management">
+            <h2>Management and Recovery</h2>
+            <p>Proper management involves a team of healthcare professionals:</p>
+            <ul>
+                <li>Physical Therapists for stability exercises.</li>
+                <li>Orthopedic specialists for joint care.</li>
+                <li>Sports trainers to adapt workout regimens.</li>
+            </ul>
+            <p>Rest and recovery are critical. Avoid pushing through pain and allow time for tissue repair.</p>
+        </section>
+
+        <section id="inspiration">
+            <h2>Inspiration for EDS Athletes</h2>
+            <p>Many athletes with EDS have achieved their goals by adapting their routines and focusing on their strengths. Joining support groups and celebrating small victories can keep you motivated!</p>
+        </section>
+    </div>
+
+    <script>
+        const accordions = document.querySelectorAll(".accordion");
+        accordions.forEach((accordion) => {
+            accordion.addEventListener("click", function () {
+                this.classList.toggle("active");
+                const panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
